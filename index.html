@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="theme-color" content="#101522">
+  <title>Ping Pong</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <header class="topbar">
+      <div>
+        <h1>🏓 Ping Pong</h1>
+        <p>Classic arcade table tennis</p>
+      </div>
+      <button id="soundBtn" class="icon-btn" aria-label="Toggle sound">🔊</button>
+    </header>
+
+    <section class="scoreboard">
+      <div class="score-card">
+        <span>You</span>
+        <strong id="playerScore">0</strong>
+      </div>
+      <div class="vs">VS</div>
+      <div class="score-card">
+        <span>Computer</span>
+        <strong id="aiScore">0</strong>
+      </div>
+    </section>
+
+    <section class="game-wrap">
+      <canvas id="gameCanvas"></canvas>
+      <div id="startOverlay" class="overlay">
+        <div class="overlay-card">
+          <div class="big-icon">🏓</div>
+          <h2>Ready?</h2>
+          <p>Move your paddle with your finger, mouse or arrow keys.</p>
+          <button id="startBtn" class="primary-btn">Start Game</button>
+        </div>
+      </div>
+      <div id="gameOverOverlay" class="overlay hidden">
+        <div class="overlay-card">
+          <div class="big-icon">🏆</div>
+          <h2 id="resultTitle">You Win!</h2>
+          <p id="resultText">Great game.</p>
+          <button id="restartBtn" class="primary-btn">Play Again</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="controls">
+      <button id="leftBtn" class="control-btn">◀</button>
+      <button id="pauseBtn" class="control-btn pause">Ⅱ</button>
+      <button id="rightBtn" class="control-btn">▶</button>
+    </section>
+
+    <footer>First to 7 wins • Made with ❤️ for you</footer>
+  </main>
+  <script src="game.js"></script>
+</body>
+</html>
